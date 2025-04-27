@@ -1,41 +1,52 @@
+/* src/App.module.css */
+
+/* Make the background very light and healthy */
 body {
-  background: #f6f6f2;             /* Soft, healthy, very light */
+  background: #f8f7f3;
   min-height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-/* Make the main container really fill the page, but not too wide on huge screens */
+/* This fills the whole width and centers children */
 .container {
   width: 100vw;
   min-height: 100vh;
   margin: 0;
-  padding: 2rem 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: system-ui, sans-serif;
-  background: transparent; /* Remove background, rely on body */
+  background: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Card list layout */
+/* Keep main content centered and responsive */
+.mainContent {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem 2vw 2rem 2vw;
+  box-sizing: border-box;
+}
+
+/* Recipe card list with nice spacing */
 .recipes {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 2rem;
 }
 
-/* Meal plan box */
+/* Meal plan box styling */
 .mealPlanBox {
   width: 100%;
   max-width: 700px;
-  border: 1px solid #e0e4e9;
+  border: 1px solid #e4e8ee;
   border-radius: 10px;
   padding: 1rem;
-  background: #fcfcfc;
+  background: #fffdf8;
   margin: 2rem 0;
   box-sizing: border-box;
 }
@@ -60,7 +71,7 @@ h2 {
   width: 270px;
   border-radius: 6px;
   border: 1px solid #cfd8dc;
-  background: #f6f6f2;
+  background: #f8f7f3;
   font-size: 1rem;
 }
 
@@ -82,18 +93,17 @@ h2 {
   padding: 0.5rem;
   border-radius: 4px;
   border: 1px solid #cfd8dc;
-  background: #f6f6f2;
+  background: #f8f7f3;
 }
 
-@media (max-width: 1000px) {
-  .container {
-    width: 100vw;
-    padding: 1rem 0;
+@media (max-width: 900px) {
+  .mainContent {
+    padding: 1rem 1vw;
   }
   .recipes {
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
   }
   .mealPlanBox {
     max-width: 100vw;
