@@ -55,15 +55,16 @@ h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   letter-spacing: -1px;
-  color: #305075;
+  color: #29404c;
 }
 
 h2 {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: #4a8072;
+  color: #4a8072;  
   font-weight: 700;
 }
+
 
 .searchBar {
   padding: 0.5rem;
@@ -79,22 +80,31 @@ h2 {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  gap: 1rem;
 }
 
 .day {
   width: 120px;
   font-weight: 600;
-  color: #305075;
+  color: #29404c;
 }
 
 .recipeSelect {
   flex: 1;
-  margin-right: 1rem;
   padding: 0.5rem;
-  border-radius: 4px;
+  border-radius: 6px;
   border: 1px solid #cfd8dc;
-  background: #f8f7f3;
+  background: #fff;
+  color: #333; 
+  font-size: 0.9rem;
 }
+
+.assignedRecipe {
+  color: #4a8072;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
 
 @media (max-width: 900px) {
   .mainContent {

@@ -51,26 +51,26 @@ export default function App() {
 
         <h2>Your Meal Plan</h2>
         <div className={styles.mealPlanBox}>
-          {daysOfWeek.map(day => (
+          {daysOfWeek.map((day) => (
             <div className={styles.mealPlannerRow} key={day}>
               <span className={styles.day}>{day}:</span>
               <select
                 className={styles.recipeSelect}
                 value={mealPlan[day] || ""}
-                onChange={e => handleAssignRecipe(day, e.target.value)}
+                onChange={(e) => handleAssignRecipe(day, e.target.value)}
               >
                 <option value="">-- Select a recipe --</option>
-                {sampleRecipes.map(recipe => (
+                {sampleRecipes.map((recipe) => (
                   <option value={recipe.id} key={recipe.id}>
                     {recipe.name}
                   </option>
                 ))}
               </select>
-              {mealPlan[day] ? (
-                <span style={{ color: "#888" }}>
+              {mealPlan[day] && (
+                <span className={styles.assignedRecipe}>
                   ({getRecipeById(mealPlan[day])?.name})
                 </span>
-              ) : null}
+              )}
             </div>
           ))}
         </div>

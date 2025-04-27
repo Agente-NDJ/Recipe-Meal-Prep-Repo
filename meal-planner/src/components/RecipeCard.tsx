@@ -1,17 +1,24 @@
-import styles from './RecipeCard.module.css';
 import { Recipe } from "../types/Recipe";
-import React from 'react';
+import styles from "./RecipeCard.module.css";
 
 interface RecipeCardProps {
   recipe: Recipe;
 }
 
-const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => (
-  <div className={styles.card}>
-    <img className={styles.img} src={recipe.image} alt={recipe.name} />
-    <div className={styles.name}>{recipe.name}</div>
-    <div className={styles.desc}>{recipe.description}</div>
-  </div>
-);
+const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
+  return (
+    <div className={styles.card}>
+      <img
+        className={styles.image}
+        src={recipe.image}
+        alt={recipe.name}
+      />
+      <div className={styles.content}>
+        <h3 className={styles.title}>{recipe.name}</h3>
+        <p className={styles.description}>{recipe.description}</p>
+      </div>
+    </div>
+  );
+};
 
 export default RecipeCard;
