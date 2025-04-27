@@ -1,0 +1,102 @@
+body {
+  background: #f6f6f2;             /* Soft, healthy, very light */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the main container really fill the page, but not too wide on huge screens */
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+  background: transparent; /* Remove background, rely on body */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Card list layout */
+.recipes {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Meal plan box */
+.mealPlanBox {
+  width: 100%;
+  max-width: 700px;
+  border: 1px solid #e0e4e9;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #fcfcfc;
+  margin: 2rem 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+  color: #305075;
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #4a8072;
+  font-weight: 700;
+}
+
+.searchBar {
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  width: 270px;
+  border-radius: 6px;
+  border: 1px solid #cfd8dc;
+  background: #f6f6f2;
+  font-size: 1rem;
+}
+
+.mealPlannerRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.day {
+  width: 120px;
+  font-weight: 600;
+  color: #305075;
+}
+
+.recipeSelect {
+  flex: 1;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #cfd8dc;
+  background: #f6f6f2;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 100vw;
+    padding: 1rem 0;
+  }
+  .recipes {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .mealPlanBox {
+    max-width: 100vw;
+    border-radius: 0;
+  }
+}
